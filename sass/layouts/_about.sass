@@ -9,6 +9,7 @@
   h3
     @include font(1em,$font-second-title,400)
   .row
+    //margin-bottom: 10em
     p
       @include font(1em,$font-base,300)
       color: $gray
@@ -21,6 +22,9 @@
         width: 60%
         margin-left: auto
         margin-right: auto
+      @media only screen and (max-width : 480px)
+        height: 100%
+        width: 100%
     .timeline
       &:after
         display: inline-block
@@ -52,6 +56,36 @@
         @media only screen and (max-width : 992px)
           left: -25%
           margin-left: -1.5px
+    .circletext
+      display: inline-block
+      position: relative
+      width: 100%
+      background-color: pink
+      border-radius: 50%
+      border: 7px solid $gray-lighter
+      @media only screen and (max-width : 992px)
+        width: 60%
+      @media only screen and (max-width : 480px)
+        width: 100%
+      .dummy
+        margin-top: 100%
+      .circletext-inner
+        h4
+          @include font(1em,$font-second-title,700)
+          line-height: 26px
+          @include center(both)
+          @media only screen and (max-width : 992px)
+            @include font(0.8em,$font-second-title,700)
+            line-height: 18px
+          @media only screen and (max-width : 768px)
+            @include font(0.6em,$font-second-title,700)
+            line-height: 10px
+            top: 35%
+          @media only screen and (max-width : 480px)
+            @include font(0.5em,$font-second-title,700)
+            line-height: 10px
+            top: 40%
+/*
     .timeline-end
       display: block
       margin-left: auto
@@ -80,4 +114,4 @@
         @include font-size(16)
         @media only screen and (max-width : 1200px)
           @include font-size(10)
-        
+
