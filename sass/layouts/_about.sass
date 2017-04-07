@@ -1,0 +1,83 @@
+@import "./mixins"
+@import "./vars"
+
+.about
+  h2
+    margin-top: 3em
+    @include font(3em,$font-title,700)
+    color: $gray-base
+  h3
+    @include font(1em,$font-second-title,400)
+  .row
+    p
+      @include font(1em,$font-base,300)
+      color: $gray
+      strong
+        @include font(1.2em,$font-base,700)
+    .img-circle
+      border: 7px solid $gray-lighter
+      @media only screen and (max-width : 992px)
+        height: 60%
+        width: 60%
+        margin-left: auto
+        margin-right: auto
+    .timeline
+      &:after
+        display: inline-block
+        height: 100%
+        top: 0
+        bottom: 0
+        position: absolute
+        content: " "
+        width: 3px
+        background-color: green
+        left: -25%
+        margin-left: -1.5px
+        z-index: -1
+    .text-right
+      @media only screen and (max-width : 992px)
+        text-align: left
+      &:after
+        display: inline-block
+        height: 100%
+        top: 0
+        bottom: 0
+        position: absolute
+        content: " "
+        width: 3px
+        background-color: green
+        right: -25%
+        margin-right: -1.5px
+        z-index: -1
+        @media only screen and (max-width : 992px)
+          left: -25%
+          margin-left: -1.5px
+    .timeline-end
+      display: block
+      margin-left: auto
+      margin-right: auto
+      background-color: $color-primary
+      //padding: 2em 3.1em
+      border: 7px solid $gray-lighter
+      border-radius: 50%
+      //@include ellipsis(100%)
+      //@include calc(height,width)
+      //position: relative
+      width: $image-size
+      height: $image-size
+      @media only screen and (max-width : 1200px)
+        width: 131px
+        height: 131px
+      @media only screen and (max-width : 992px)
+        width: 60%
+        height: auto
+      h4 
+        @include font(1em,$font-second-title,700)
+        //padding-bottom: 25%
+        //padding-top: calc(($image-size-48)/2)
+        //padding-top: 35px
+        @include center(both)
+        @include font-size(16)
+        @media only screen and (max-width : 1200px)
+          @include font-size(10)
+        

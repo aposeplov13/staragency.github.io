@@ -1,0 +1,22 @@
+@import "./mixins"
+
+.portfolio
+  background-color: $gray-lighter
+  h2
+    margin-top: 3em
+    @include font(3em,$font-title,700)
+    color: $gray-base
+  h3
+    @include font(1em,$font-second-title,400)
+  .row
+    margin-top: 4em
+    margin-bottom: 7em
+    .thumbnail
+      h4
+        margin-top: 1.5em
+        margin-bottom: 0.3em
+        @include font(1.2em,$font-second-title,700)
+      p
+        margin-bottom: 2em
+        @include font(1em,$font-base,300)
+        color: $gray
